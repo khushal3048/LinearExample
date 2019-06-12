@@ -29,12 +29,30 @@ public class MainActivity extends AppCompatActivity {
                 String uname = edt_uname.getText().toString();
                 String pass = edt_pass.getText().toString();
 
+                // Using Bundle Object
+
+
+                Bundle bundle = new Bundle();
+
+                bundle.putString("un",uname);
+                bundle.putString("ps",pass);
+
+
+                Intent i = new Intent(MainActivity.this,Dashboard.class);
+
+                i.putExtras(bundle);
+
+                startActivity(i);
+
+                // Using Normal Intent Object
+                /*
                 Intent i = new Intent(MainActivity.this,Dashboard.class);
 
                 i.putExtra("un",uname);
                 i.putExtra("ps",pass);
 
                 startActivity(i);
+  */
             }
         });
     }
