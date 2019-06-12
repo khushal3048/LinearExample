@@ -19,7 +19,7 @@ public class Dashboard extends AppCompatActivity {
 
 //        Using Bundle Object
 
-        
+
         Bundle bundle = getIntent().getExtras();
 
         unm = bundle.getString("un");
